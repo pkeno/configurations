@@ -9,18 +9,18 @@ export PS1="[]/\W \[$txtwht\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 # Path
 export PATH=$PATH:/Applications/CMake.app/Contents/bin/
-export PATH=${PATH}:/Users/patrik.andersson/Library/Android/sdk/tools/
-export PATH=${PATH}:/Users/patrik.andersson/Library/Android/sdk/platform-tools/
+export PATH=${PATH}:~/Library/Android/sdk/tools/
+export PATH=${PATH}:~/Library/Android/sdk/platform-tools/
 
 export CLICOLOR=1
 export LSCOLORS=HxBxhxDxfxhxhxhxhxcxcx
 
 # Android
-export ANDROID_NDK=/Users/patrik.andersson/Library/Android/sdk/ndk-bundle
+export ANDROID_NDK=~/Library/Android/sdk/ndk-bundle
 export NDK_HOME="$ANDROID_NDK"
-export ANDROID_HOME=/Users/patrik.andersson/Library/Android/sdk/
+export ANDROID_HOME=~/Library/Android/sdk/
 export PATH=$PATH:$ANDROID_NDK
-alias ndkbuild=/Users/patrik.andersson/Library/Android/ndk/android-ndk-r10d/ndk-build
+alias ndkbuild=~/Library/Android/ndk/android-ndk-r10d/ndk-build
 alias androidstudio="open -a /Applications/Android\ Studio.app"
 alias androidpackages="adb shell 'pm list packages -f' | sed -e 's/.*=//' | sort"
 androidinstalllaunch() {
