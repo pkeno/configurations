@@ -1,4 +1,4 @@
-colors deus
+colors jellybeans
 syntax on
 
 set number
@@ -29,8 +29,11 @@ Plugin 'mxw/vim-jsx'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
-let g:airline_theme='deus'
+" colors
+Plugin 'nanotech/jellybeans.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,3 +44,9 @@ if has("autocmd")
 endif
 
 let @w = '/\s\+$'
+
+" Airline
+let g:airline_theme='jellybeans'
+
+" NERDTree
+nnoremap F :NERDTreeToggle<Enter>

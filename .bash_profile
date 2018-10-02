@@ -14,8 +14,8 @@ export PATH=${PATH}:~/Library/Android/sdk/platform-tools/
 export PATH=${PATH}:~/Library/Android/sdk/build-tools/25.0.2/
 export PATH=${PATH}:/usr/local/opt/qt5/bin
 
-export CLICOLOR=1
-export LSCOLORS=HxBxhxDxfxhxhxhxhxcxcx
+#export CLICOLOR=1
+#export LSCOLORS=HxBxhxDxfxhxhxhxhxcxcx
 
 # Android
 export ANDROID_NDK=~/Library/Android/sdk/ndk-bundle
