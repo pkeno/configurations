@@ -3,7 +3,7 @@ alias edit="open -a TextEdit"
 
 # Git
 source ~/scripts/gitscripts/bash_git_completion.sh
-export GITAWAREPROMPT=~/scripts/gitscripts/git-aware-prompt
+GITAWAREPROMPT=~/scripts/gitscripts/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 export PS1="[]/\W \[$txtwht\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 

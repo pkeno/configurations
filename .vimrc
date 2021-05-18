@@ -1,6 +1,7 @@
-colors jellybeans
 syntax on
-
+          
+set backspace=indent,eol,start
+set noshowmode
 set number
 set expandtab
 set tabstop=4
@@ -8,35 +9,25 @@ set softtabstop=4
 set shiftwidth=4
 set nofoldenable
 set nocompatible              " be iMproved, required
+set laststatus=2              " Required by lightline
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'itchyny/lightline.vim'
 
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'w0rp/ale'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+call plug#end()
 
-" colors
-Plugin 'nanotech/jellybeans.vim'
+" Nord
+colorscheme nord
 
+" Lightline
+let g:lightline = {'colorscheme': 'nord'}
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 if has("autocmd")
@@ -44,9 +35,6 @@ if has("autocmd")
 endif
 
 let @w = '/\s\+$'
-
-" Airline
-let g:airline_theme='jellybeans'
 
 " NERDTree
 nnoremap F :NERDTreeToggle<Enter>
